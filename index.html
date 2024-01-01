@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+  <meta charset="utf-8">
+  <title>fluid-three</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta http-equiv="Content-Language" content="ja">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <style>
+
+    body{
+      overscroll-behavior: none;
+      /* cursor: none; */
+      touch-action: none;
+      background-color: red !important;
+    }
+
+    canvas{
+      position: fixed;
+      top:0;
+      left: 0;
+      filter: invert(1);
+    }
+    .dg {
+      opacity: 0;
+    }
+
+    main {
+      position: relative;
+      /* background-color: red; */
+      /* backdrop-filter: blur(20px); */
+      /* backdrop-filter: saturate(50%); */
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      height: 95dvh;
+    }
+    img {
+      height: 10vh;
+    }
+
+
+    .grainient-noise {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.1) url(https://grainy-gradients.vercel.app/noise.svg);   
+      filter: contrast(250%) brightness(10%);
+      mix-blend-mode: multiply;
+      z-index: 0;
+    }
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/frd-logo.svg" />
+  </main>
+
+  
+    <div class="grainient-noise"></div>
+    <script src="./main.min.js" type="text/javascript"></script>
+    <!-- <script src="/package.json" type="json"></script>
+    <script src="../js/main.js" type="text/javascript"></script> -->
+</body>
+</html>
